@@ -1,0 +1,179 @@
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/onsenui.css">
+    <link rel="stylesheet" type="text/css" href="css/onsen-css-components.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/onsenui.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body class="page--material__background">
+
+<ons-navigator swipeable page="firstPage.html" id="myNavigator"></ons-navigator>
+
+<template id="firstPage.html" ><ons-page id="firstPage">
+    <div class="padding" id="home">
+        <div class="toolbar">
+            <div class="toolbar__left">
+                <span class="toolbar-button">LOGO FODA</span>
+            </div>
+            <div class="toolbar__center">
+                mariajuda
+            </div>
+        </div>
+    </div>
+
+    <div class="centered">
+        <ons-button class="button" style="width: 98%; margin: 5 auto;" id="calc">New deal calc</ons-button>
+        <ons-button class="button" style="width: 98%; margin: 5 auto;" id="diary">Usage diary</ons-button>
+        <ons-button class="button" style="width: 98%; margin: 5 auto;" id="circle">Circle control</ons-button>
+        <ons-button class="button" style="width: 98%; margin: 5 auto;" id="info">Information</ons-button>
+    </div>
+</ons-page></template>
+
+<!-- JORGES -->
+
+<template id="calc.html"><ons-page id="calc">
+    <div class="toolbar">
+        <div class="toolbar__left">
+            <span class="toolbar-button"><ons-back-button id="backToFirstPage">back</ons-back-button></span>
+        </div>
+        <div class="toolbar__center">
+            mariajuda
+        </div>
+    </div>
+
+    <!-- JORGE CALC -->
+    <br>
+    <div class="centered">
+        <div>amount:
+            <input type="number" class="text-input text-input--underbar " placeholder="100g" value="" id="calcAmount" onchange="changeContribution()">
+        </div>
+        <div>cost:
+            <input type="number" class="text-input text-input--underbar" placeholder="U$20" value="" id="calcCost" onchange="changeContribution()">
+        </div>
+        <div>
+          <div id="hid1"></div>
+        </div>
+        <div>
+            <div>how many people?
+            <input type="number" class="text-input text-input--underbar" placeholder="3" value="1" id="calcPeople" onchange="addingIndividuals()">
+            </div>
+        </div>
+        <div id="hid2"></div>
+        <div id="hid3"></div>
+        <!--<div><button class='button--large--cta' id='calculateRun' onclick='calculateRun()'>calculate</button></div>
+      -->
+    </div>
+
+</ons-page></template>
+
+
+<template id="diary.html"><ons-page id="diary">
+    <div class="toolbar">
+        <div class="toolbar__left">
+            <span class="toolbar-button"><ons-back-button id="backToFirstPage">- back</ons-back-button></span>
+        </div>
+        <div class="toolbar__center">
+            mariajuda
+        </div>
+    </div>
+
+    <!-- JORGE DIARY-->
+    <div id="teste"></div>
+    <div style="display:none" class="centered" id="firstTime">
+      It seems that it is your fist time arroud here.<br>
+      Explanation: G is short for God;<br>
+      I.e. hard pray equals 1G or 1000mG.<br>
+      One request: set how and how much you pray.<br>
+      <div>
+        praying closed hands<input type="number" class="text-input text-input--underbar" placeholder="800mg" value="" id="closedPray">
+      </div>
+      <div>
+        praying open hands<input type="number" class="text-input text-input--underbar" placeholder="500mg" value="" id="openPray">
+      </div>
+
+    </div>
+    <div  class="centered">
+    <div id="today" class="centered">
+      Until now: <a id="todayPrays"></a> |
+    </div>
+    <div>
+      Add:
+      <input type="button" onclick="addPray()"></input>
+    </div>
+    </div>
+    
+     <div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>August<br><span style="font-size:18px">2017</span></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  ...etc
+</ul> 
+
+
+
+
+</ons-page></template>
+
+
+<template id="circle.html"><ons-page id="circle">
+    <div class="toolbar">
+        <div class="toolbar__left">
+            <span class="toolbar-button"><ons-back-button id="backToFirstPage">- back</ons-back-button></span>
+        </div>
+        <div class="toolbar__center">
+            mariajuda
+        </div>
+    </div>
+
+    <!-- JORGE CIRCLE -->
+
+</ons-page></template>
+
+
+
+<template id="info.html"><ons-page id="info">
+    <div class="toolbar">
+        <div class="toolbar__left">
+            <span class="toolbar-button"><ons-back-button id="backToFirstPage">back</ons-back-button></span>
+        </div>
+        <div class="toolbar__center">
+            mariajuda
+        </div>
+    </div>
+
+    <!-- JORGE INFO -->
+    <h1>ai piazao</h1>
+
+</ons-page></template>
+
+</body>
+</html>
